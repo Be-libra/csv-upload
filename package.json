@@ -1,0 +1,31 @@
+{
+  "name": "csv-upload-backend",
+  "version": "1.0.0",
+  "description": "Backend system with Upload API, Fetch API, and Kafka consumer",
+  "main": "src/api/index.js",
+  "scripts": {
+    "start": "node src/api/index.js",
+    "consumer": "node src/consumer/index.js",
+    "test": "node --test tests/util-csv.test.js tests/upload.test.js tests/repository.test.js tests/records.test.js tests/consumer.test.js",
+    "test:coverage": "c8 node --test tests/util-csv.test.js tests/upload.test.js tests/repository.test.js tests/records.test.js tests/consumer.test.js",
+    "db:schema": "node src/db/runSchema.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "ioredis": "^5.4.1",
+    "kafkajs": "^2.2.4",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "c8": "^10.1.2"
+  }
+}
