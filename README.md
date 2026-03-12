@@ -33,7 +33,7 @@ docker-compose up -d
 
 Wait until PostgreSQL, Redis, and Kafka are healthy (e.g. 30–60 seconds for Kafka).
 
-### 4. Database schema
+### 4. Database schema (optional)
 
 ```bash
 npm run db:schema
